@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f7f7f7">
+<meta name="color-scheme" content="light">
+<!-- 名片上有手机号、微信号：不让搜索引擎收录，只有拿到链接的人能看到 -->
+<meta name="robots" content="noindex, nofollow">
+<title>Huohua Hub · Founders</title>
+<meta name="description" content="Founders of Huohua Hub (火花工坊) — every great AI idea starts with a spark.">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Huohua Hub · Founders">
+<meta property="og:description" content="Every great AI idea starts with a spark. huohuahub.com">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23ff2442'/%3E%3Cpath fill='%23fff' transform='translate(12 12.4) scale(.74) translate(-12 -12.5)' d='M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 字体异步加载：国内打不开 Google Fonts 时自动用系统字体，不会卡住页面 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" media="print" onload="this.media='all'">
+
+<script>
+/* =====================================================================
+ * 👇 名片内容：只需要改这一段
+ *   - 一个页面放两张名片：网址后加 ?p=mazhuo 是马卓，?p=renheng 是任亨
+ *   - 带 { en, zh } 的字段分别是英文 / 中文文案
+ *   - 联系方式留空 "" 就会自动隐藏那一行
+ *   - 文案里 [[...]] 包住的部分会显示成火花渐变色，\n 是换行
+ * ===================================================================== */
+window.CARD = {
+  // 名片网址：部署后填上，如 "https://huohuahub.com/card/"（二维码、分享都用它）
+  // 每个人的名片 = 这个地址 + "?p=<id>"；留空 = 自动用当前页面地址
+  cardUrl: "https://malus-smart.github.io/huohua-card/",
+
+  // ---------- 团队成员（TODO：补全联系方式，确认头衔）----------
+  people: [
+    {
+      id: "mazhuo",
+      name:       { en: "Zhuo Ma", zh: "马卓" },
+      familyName: "Ma",                 // 存进对方通讯录时用的「姓」
+      givenName:  "Zhuo",               // 存进对方通讯录时用的「名」
+      title:      { en: "Co-founder", zh: "联合创始人" },
+      avatar:     "",                   // 头像路径，如 "assets/mazhuo.jpg"（建议 400×400 正方形 JPG）；留空显示火花 Logo
+      email:    "you@huohuahub.com",
+      wechat:   "your_wechat_id",
+      phone:    "+86 138 0000 0000",
+      whatsapp: "",                     // 海外常用，有的话填，如 "+86 138 0000 0000"
+      linkedin: "https://www.linkedin.com/in/your-handle",
+      x:        "https://x.com/your_handle"
+    },
+    {
+      id: "renheng",
+      name:       { en: "Heng Ren", zh: "任亨" },
+      familyName: "Ren",
+      givenName:  "Heng",
+      title:      { en: "Co-founder", zh: "联合创始人" },
+      avatar:     "",
+      email:    "you@huohuahub.com",
+      wechat:   "your_wechat_id",
+      phone:    "+86 138 0000 0000",
+      whatsapp: "",
+      linkedin: "https://www.linkedin.com/in/your-handle",
+      x:        "https://x.com/your_handle"
+    }
+  ],
+
+  // ---------- 公司（两人共用）----------
+  company:  { en: "Huohua Hub", zh: "火花工坊" },
+  website:  "https://huohuahub.com",
+  location: { en: "Shanghai, China", zh: "中国 · 上海" },
+  city: "Shanghai",
+  country: "China",
+
+  // ---------- 文案（两人共用）----------
+  // 打字机第一句自动是「头衔 @ 公司」，后面轮播这几句
+  taglines: {
+    en: ["Connect. Spark. Create.", "Vibe coder. Community builder.", "Shipping AI-native from Shanghai"],
+    zh: ["连接创作者，碰撞想法，创造价值", "Vibe Coder · 社区建设者", "在上海做 AI 原生产品"]
+  },
+  pitch: {
+    en: "Every great AI idea\nstarts with a [[spark]].",
+    zh: "每个 AI 好点子，\n都从一朵[[火花]]开始"
+  },
+  // 英文副标题顺带解释双关：外国人不知道「火花」= spark
+  mission: {
+    en: "Huohua (火花) means “spark” — we're building China's home for AI creators.",
+    zh: "我们在打造中国 AI 创作者的大本营：分享作品、提示词与 Agent Skill。"
+  },
+
+  // 关键数据：有真实用户数 / 内容数时，可以把下面任意一项换成那个数字（如 "12K"）
+  stats: [
+    { value: "8",  label: { en: "AI agents supported",     zh: "支持 Agent" } },
+    { value: "4",  label: { en: "Platforms shipped",       zh: "已上线终端" } },
+    { value: "CN", label: { en: "Live & fully compliant",  zh: "境内合规运营" } }
+  ],
+
+  builds: [
+    { icon: "users",
+      title: { en: "Creator Community", zh: "创作者社区" },
+      desc:  { en: "Where AI builders show what they shipped — demos, prompts, workflows & launch notes.",
+               zh: "AI 创作者展示作品的地方：演示、提示词、工作流和发布笔记。" } },
+    { icon: "terminal",
+      title: { en: "Agent Skill Hub", zh: "Agent Skill 市场" },
+      desc:  { en: "One command installs reviewed skills into Claude Code, Codex, Cursor & 5 more agents.",
+               zh: "一条命令，把审核过的 Skill 装进 Claude Code、Codex、Cursor 等 8 款 Agent。" } },
+    { icon: "layers",
+      title: { en: "Web · iOS · Android · CLI", zh: "Web · iOS · Android · CLI" },
+      desc:  { en: "ICP-filed and fully compliant — live across mainland China.",
+               zh: "已完成 ICP 与 App 备案，在中国大陆全平台合规上线。" } }
+  ],
+
+  agents: ["Claude Code", "Codex", "Cursor", "Gemini CLI", "Qwen Code", "OpenCode", "TRAE", "Windsurf"],
+
+  talk: {
+    en: ["Launching AI products in China", "Agent & skill integrations", "Creator partnerships", "Investors & strategic partners"],
+    zh: ["AI 产品进入中国", "Agent 与 Skill 集成", "创作者合作", "投资与战略合作"]
+  }
+};
+</script>
+
+<style>
+:root{
+  --bg:#f7f7f7;
+  --line:#f0f0f2;
+  --line-2:#e5e5ea;
+  --text:#18181b;
+  --muted:#4b5060;
+  --dim:#6f7480;
+  --accent:#ff2442;
+  --accent-strong:#e60033;
+  --accent-deep:#c00e33;
+  --accent-rgb:255,36,66;
+  --tint:#fff0f2;
+  --tint-soft:#fff7f8;
+  --outline:#ffccd4;
+  --badge:#d4002e;
+  /* 和火花工坊官网首页横幅同一套渐变 */
+  --cover:radial-gradient(120% 180% at 100% 0%,rgba(255,255,255,.16) 0%,rgba(0,0,0,0) 45%),linear-gradient(96deg,#c00e33 0%,#ff2442 55%,#ff415f 100%);
+  --num:linear-gradient(100deg,#c00e33 0%,#ff2442 60%,#ff5a3c 100%);
+  --font-display:"Space Grotesk","Avenir Next",Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  --font-body:"Avenir Next",Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,"SF Mono","Cascadia Code",Consolas,"PingFang SC","Microsoft YaHei",monospace;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;background:var(--bg)}
+body{min-height:100vh;color:var(--text);font-family:var(--font-body);line-height:1.5;background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+ul{list-style:none}
+:focus-visible{outline:2px solid var(--accent-strong);outline-offset:2px;border-radius:10px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+/* ---------- 背景：浅灰底 + 点阵 + 淡红光晕 ---------- */
+.bg{position:fixed;inset:0;z-index:0;pointer-events:none;background:
+  radial-gradient(70% 45% at 50% -10%,rgba(var(--accent-rgb),.14),transparent 70%),
+  radial-gradient(50% 40% at 100% 105%,rgba(255,122,69,.10),transparent 70%),
+  var(--bg)}
+.bg::before{content:"";position:absolute;inset:0;
+  background-image:radial-gradient(rgba(24,24,27,.11) 1px,transparent 1.3px);background-size:22px 22px;
+  -webkit-mask-image:radial-gradient(ellipse 75% 60% at 50% 30%,#000 15%,transparent 75%);
+  mask-image:radial-gradient(ellipse 75% 60% at 50% 30%,#000 15%,transparent 75%)}
+
+/* ---------- 卡片 ---------- */
+.wrap{position:relative;z-index:1;min-height:100vh;min-height:100svh;display:flex;justify-content:center;align-items:flex-start;
+  padding:max(20px,env(safe-area-inset-top)) 16px max(28px,env(safe-area-inset-bottom));perspective:1600px}
+@media (min-width:600px){.wrap{padding-top:48px;padding-bottom:56px}}
+.card{position:relative;width:100%;max-width:440px;border-radius:28px;overflow:hidden;background:#fff;
+  box-shadow:0 0 0 1px rgba(24,24,27,.04),0 2px 6px rgba(24,24,27,.04),0 30px 70px -30px rgba(192,14,51,.38);
+  transform:rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .3s ease-out;
+  animation:boot .8s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes boot{from{opacity:0;translate:0 24px}}
+
+/* ---------- 红色封面 ---------- */
+.cover{position:relative;isolation:isolate;overflow:hidden;padding:16px 16px 80px;color:#fff;background:var(--cover)}
+.cover::before{content:"";position:absolute;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(255,255,255,.09) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.09) 1px,transparent 1px);
+  background-size:24px 24px;
+  -webkit-mask-image:linear-gradient(180deg,#000,transparent 90%);mask-image:linear-gradient(180deg,#000,transparent 90%)}
+#sparks{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+.cover-spark{position:absolute;right:26px;bottom:12px;z-index:-1;width:64px;height:64px;color:#fff;opacity:.55;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px) rotate(8deg)}}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-mark{width:34px;height:34px;flex:none;border-radius:10px;box-shadow:0 8px 18px -8px rgba(80,0,20,.6)}
+.brand-text{display:flex;flex-direction:column;line-height:1.2;min-width:0}
+.brand-name{font-family:var(--font-display);font-weight:700;font-size:16px}
+.brand-sub{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.brand-name,.brand-sub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.lang{display:inline-flex;flex:none;padding:3px;border-radius:999px;background:#fff;box-shadow:0 8px 20px -10px rgba(80,0,20,.6);
+  font-family:var(--font-mono);font-size:11px;font-weight:600}
+.lang button{padding:5px 11px;border-radius:999px;color:var(--dim);transition:color .2s,background .2s}
+.lang button:hover{color:var(--text)}
+.lang button[aria-pressed="true"]{color:#fff;background:var(--accent-strong)}
+
+/* ---------- 头像与身份 ---------- */
+.body{padding:0 20px 16px}
+.profile{text-align:center}
+.avatar{position:relative;width:112px;height:112px;margin:-58px auto 0}
+.ring{position:absolute;inset:-4px;border-radius:50%;
+  background:conic-gradient(from 0deg,#ff2442,#ff7a45,#ffb547,rgba(255,255,255,0) 62%,#ff2442);animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.face{position:absolute;inset:0;border-radius:50%;overflow:hidden;display:grid;place-items:center;border:4px solid #fff;
+  background:radial-gradient(circle at 35% 28%,#fff,var(--tint) 75%);box-shadow:0 14px 30px -14px rgba(192,14,51,.6)}
+.face img{width:100%;height:100%;object-fit:cover}
+.face .flame{width:50%;height:50%;filter:drop-shadow(0 6px 10px rgba(var(--accent-rgb),.35))}
+.badge{position:absolute;right:0;bottom:4px;width:30px;height:30px;border-radius:9px;border:3px solid #fff;display:none}
+.avatar.has-photo .badge{display:block}
+.status{display:inline-flex;align-items:center;gap:7px;margin-top:16px;padding:4px 12px;border-radius:999px;
+  background:#ecfdf3;border:1px solid #c7f0d6;color:#15803d;
+  font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.status i{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.18);animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.4}}
+h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:clamp(30px,8.6vw,38px);line-height:1.08;letter-spacing:-.02em}
+.alt-name{margin-top:6px;color:var(--dim);font-size:14px}
+.alt-name.is-cjk{letter-spacing:.42em;padding-left:.42em}
+.alt-name.is-latin{font-family:var(--font-mono);font-size:12px;letter-spacing:.24em;padding-left:.24em;text-transform:uppercase}
+.role{margin-top:12px;min-height:1.6em;font-family:var(--font-mono);font-size:13px;color:var(--accent-strong)}
+.role .prompt{color:var(--dim);margin-right:7px}
+.caret{display:inline-block;width:7px;height:1.1em;margin-left:2px;vertical-align:-.2em;background:var(--accent);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pitch{margin-top:16px;font-family:var(--font-display);font-weight:700;font-size:clamp(21px,5.9vw,25px);line-height:1.28;letter-spacing:-.015em;text-wrap:balance}
+.pitch em{font-style:normal;white-space:nowrap;padding:0 2px;color:var(--accent-strong);
+  background:linear-gradient(transparent 60%,#ffd9e0 60%,#ffd9e0 92%,transparent 92%)}
+.mission{margin:10px auto 0;max-width:34ch;font-size:14px;color:var(--muted);text-wrap:balance}
+
+/* ---------- 主操作 ---------- */
+.actions{display:grid;grid-template-columns:1fr auto auto;gap:10px;margin-top:20px}
+.btn{height:52px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:800;font-size:16px;
+  transition:transform .15s,box-shadow .25s,background .25s,border-color .25s,color .25s}
+.btn:active{transform:scale(.97)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-primary{position:relative;overflow:hidden;color:#fff;background:var(--accent-strong);box-shadow:0 12px 26px -12px rgba(230,0,51,.8)}
+.btn-primary::after{content:"";position:absolute;inset:0;transform:translateX(-120%);
+  background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.3) 50%,transparent 70%);animation:sheen 4s ease-in-out infinite 1.5s}
+@keyframes sheen{55%,100%{transform:translateX(120%)}}
+.btn-primary:hover{background:var(--accent-deep);box-shadow:0 16px 32px -12px rgba(192,14,51,.85)}
+.btn-ghost{width:52px;color:var(--text);background:#fff;border:1px solid var(--line-2)}
+.btn-ghost:hover{color:var(--accent-strong);border-color:var(--outline);background:var(--tint)}
+
+/* ---------- 分区 ---------- */
+.label{display:flex;align-items:center;gap:8px;margin:26px 2px 10px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.label b{color:var(--accent-strong);font-weight:700}
+.label::after{content:"";flex:1;height:1px;margin-left:4px;background:linear-gradient(90deg,var(--line-2),transparent)}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;background:linear-gradient(180deg,#fff,var(--tint-soft))}
+.stat{padding:15px 8px 13px;text-align:center}
+.stat+.stat{border-left:1px solid var(--line-2)}
+.stat b{display:block;font-family:var(--font-display);font-size:31px;line-height:1;font-weight:700;background:var(--num);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{display:block;margin-top:9px;font-family:var(--font-mono);font-size:10px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
+
+.builds{display:grid;gap:8px}
+.build{display:flex;gap:12px;padding:12px;border-radius:16px;border:1px solid var(--line-2);background:#fff;transition:border-color .25s,background .25s}
+.build:hover{border-color:var(--outline);background:var(--tint-soft)}
+.build h3{font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.3}
+.build p{margin-top:3px;font-size:13px;line-height:1.45;color:var(--muted)}
+
+.ico{flex:none;width:38px;height:38px;display:grid;place-items:center;border-radius:12px;color:var(--accent-strong);background:var(--tint);border:1px solid #ffe0e5}
+.ico svg{width:18px;height:18px}
+
+.marquee{overflow:hidden;border-radius:16px;border:1px solid var(--line-2);background:#fafafa;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-track{display:flex;width:max-content;animation:marquee 28s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee ul{display:flex;gap:8px;padding:10px 8px 10px 0}
+.marquee li{flex:none;padding:6px 12px;border-radius:999px;font-family:var(--font-mono);font-size:12px;font-weight:600;white-space:nowrap;background:#fff;border:1px solid var(--line-2)}
+.marquee li::before{content:"◆";margin-right:7px;font-size:8px;vertical-align:2px;color:var(--accent)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--badge);background:var(--tint);border:1px solid var(--outline)}
+.chip::before{content:"";width:6px;height:6px;flex:none;border-radius:50%;background:var(--accent)}
+
+.contacts{display:grid;gap:6px}
+.row{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border-radius:16px;text-align:left;
+  border:1px solid var(--line-2);background:#fff;transition:background .2s,border-color .2s,transform .15s}
+.row:hover{background:var(--tint-soft);border-color:var(--outline)}
+.row:active{transform:scale(.985)}
+.meta{flex:1;min-width:0;display:flex;flex-direction:column}
+.k{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.v{font-size:15px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.act{flex:none;display:inline-flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;color:var(--dim);transition:color .2s}
+.act svg{width:13px;height:13px}
+.row:hover .act{color:var(--accent-strong)}
+.mate{flex:none;width:38px;height:38px;display:grid;place-items:center;overflow:hidden;border-radius:50%;
+  font-family:var(--font-display);font-weight:700;font-size:16px;color:#fff;background:var(--cover);box-shadow:0 6px 14px -6px rgba(192,14,51,.6)}
+.mate img{width:100%;height:100%;object-fit:cover}
+
+.foot{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:22px;padding:12px 4px 2px;border-top:1px dashed var(--line-2);
+  font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;color:var(--dim)}
+.foot span:last-child{text-transform:uppercase;text-align:right}
+
+/* ---------- 提示 ---------- */
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));z-index:30;max-width:calc(100% - 32px);
+  padding:11px 16px;border-radius:12px;font-size:13px;text-align:center;color:#fff;background:#18181b;box-shadow:0 14px 40px rgba(24,24,27,.25);
+  opacity:0;transform:translate(-50%,16px);transition:opacity .25s,transform .25s;pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- 二维码弹层 ---------- */
+.modal{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:16px;
+  background:rgba(24,24,27,.42);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  visibility:hidden;opacity:0;transition:opacity .25s,visibility 0s .25s}
+.modal.open{visibility:visible;opacity:1;transition:opacity .25s}
+.sheet{position:relative;width:100%;max-width:380px;padding:22px 20px 20px;border-radius:28px;text-align:center;
+  background:#fff;box-shadow:0 30px 80px -20px rgba(24,24,27,.35);transform:translateY(12px) scale(.97);transition:transform .25s}
+.modal.open .sheet{transform:none}
+.close{position:absolute;top:12px;right:12px;width:36px;height:36px;display:grid;place-items:center;border-radius:10px;color:var(--dim)}
+.close:hover{color:var(--text);background:#f4f4f5}
+.close svg{width:20px;height:20px}
+.sheet-kicker{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--accent-strong)}
+.sheet h2{margin-top:4px;font-family:var(--font-display);font-size:22px;font-weight:700}
+.tabs{display:inline-flex;margin-top:14px;padding:3px;border-radius:999px;background:#f4f4f5}
+.tabs button{padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--muted);transition:color .2s,background .2s}
+.tabs button[aria-selected="true"]{color:#fff;background:var(--accent-strong)}
+.qr-frame{position:relative;width:min(76vw,290px);margin:18px auto 0;padding:10px}
+.corner{position:absolute;width:22px;height:22px;border:2px solid var(--accent);pointer-events:none}
+.corner.tl{top:0;left:0;border-right:0;border-bottom:0;border-top-left-radius:8px}
+.corner.tr{top:0;right:0;border-left:0;border-bottom:0;border-top-right-radius:8px}
+.corner.bl{bottom:0;left:0;border-right:0;border-top:0;border-bottom-left-radius:8px}
+.corner.br{bottom:0;right:0;border-left:0;border-top:0;border-bottom-right-radius:8px}
+.qr-box{aspect-ratio:1;display:grid;place-items:center;padding:16px;border-radius:16px;background:#fff;border:1px solid var(--line-2);color:var(--text)}
+.qr-box svg{width:100%;height:100%;display:block}
+.qr-msg{font-size:13px;line-height:1.6;padding:8px;color:var(--muted)}
+.qr-cap{margin-top:14px;font-size:14px;font-weight:600}
+.qr-url{margin-top:4px;font-family:var(--font-mono);font-size:11px;color:var(--dim);word-break:break-all}
+
+@media (max-width:360px){
+  .body{padding-left:16px;padding-right:16px}
+  .stat span{font-size:9px}
+  .brand-sub{display:none}
+  .actions{gap:8px}
+  .btn{font-size:15px}
+  .btn-ghost{width:48px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .marquee-track{width:auto}
+  .marquee ul{flex-wrap:wrap;padding-left:8px}
+  .marquee ul+ul{display:none}
+}
+</style>
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+
+<main class="wrap">
+  <article class="card" id="card">
+    <!-- 红色封面：和官网首页横幅同款渐变，火花粒子在这里往上飘 -->
+    <header class="cover">
+      <canvas id="sparks" aria-hidden="true"></canvas>
+      <svg class="cover-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+      <div class="topbar">
+        <a class="brand" id="brandLink" href="https://huohuahub.com" target="_blank" rel="noopener">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6.5" fill="#fff"/><path fill="#ff2442" transform="translate(12 12.4) scale(.74) translate(-12 -12.5)" d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
+          <span class="brand-text"><span class="brand-name" id="brandName"></span><span class="brand-sub" id="brandSub"></span></span>
+        </a>
+        <div class="lang" role="group" id="langGroup">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="body">
+    <section class="profile">
+      <div class="avatar" id="avatarWrap">
+        <span class="ring" aria-hidden="true"></span>
+        <div class="face" id="avatar"></div>
+        <svg class="badge" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="6.5" fill="#ff2442"/><path fill="#fff" transform="translate(12 12.4) scale(.74) translate(-12 -12.5)" d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg>
+      </div>
+      <p class="status"><i aria-hidden="true"></i><span data-i18n="status"></span></p>
+      <h1 id="name"></h1>
+      <p class="alt-name" id="altName"></p>
+      <p class="role"><span class="sr-only" id="roleSr"></span><span class="prompt" aria-hidden="true">&gt;_</span><span id="typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span></p>
+      <p class="pitch" id="pitch"></p>
+      <p class="mission" id="mission"></p>
+    </section>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="saveBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1"/><circle cx="8.5" cy="7.5" r="3.5"/><path d="M19 8v6M22 11h-6"/></svg><span data-i18n="save"></span></button>
+      <button class="btn btn-ghost" id="qrBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3M21 14v.01M14 21h3M21 17v4h-1"/></svg></button>
+      <button class="btn btn-ghost" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></button>
+    </div>
+
+    <h2 class="label"><b>//</b><span data-i18n="numbers"></span></h2>
+    <div class="stats" id="stats"></div>
+
+    <h2 class="label"><b>//</b><span data-i18n="builds"></span></h2>
+    <ul class="builds" id="builds"></ul>
+
+    <h2 class="label"><b>//</b><span data-i18n="agents"></span></h2>
+    <div class="marquee" id="agents"></div>
+
+    <h2 class="label"><b>//</b><span data-i18n="talk"></span></h2>
+    <ul class="chips" id="talk"></ul>
+
+    <h2 class="label"><b>//</b><span data-i18n="connect"></span></h2>
+    <ul class="contacts" id="contacts"></ul>
+
+    <div id="teamSection" hidden>
+      <h2 class="label"><b>//</b><span data-i18n="team"></span></h2>
+      <ul class="contacts" id="team"></ul>
+    </div>
+
+    <footer class="foot"><span id="footLeft"></span><span id="footRight"></span></footer>
+    </div>
+  </article>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-labelledby="qrTitle" aria-hidden="true">
+  <div class="sheet">
+    <button class="close" id="qrClose" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    <p class="sheet-kicker">// SCAN</p>
+    <h2 id="qrTitle" data-i18n="qrTitle"></h2>
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" data-tab="card" data-i18n="qrTabCard"></button>
+      <button type="button" role="tab" data-tab="site" data-i18n="qrTabSite"></button>
+    </div>
+    <div class="qr-frame">
+      <span class="corner tl" aria-hidden="true"></span><span class="corner tr" aria-hidden="true"></span>
+      <span class="corner bl" aria-hidden="true"></span><span class="corner br" aria-hidden="true"></span>
+      <div class="qr-box" id="qrBox"></div>
+    </div>
+    <p class="qr-cap" id="qrCap"></p>
+    <p class="qr-url" id="qrUrl"></p>
+  </div>
+</div>
+
+<!-- 本地二维码组件（node-qrcode 打包，离线可用，不依赖任何外网 CDN） -->
+<script src="assets/qrcode.min.js" defer></script>
+<script>
+(() => {
+  "use strict";
+  const CARD = window.CARD;
+  // 当前显示谁：网址 ?p=<id>，找不到就显示第一个人
+  const PEOPLE = CARD.people || [];
+  const ME = PEOPLE.find((x) => x.id === new URLSearchParams(location.search).get("p")) || PEOPLE[0];
+  const FLAME = "M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4";
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const UI = {
+    en: {
+      status: "Open to connect", save: "Save Contact", qr: "Show QR code", share: "Share", close: "Close", lang: "Language",
+      numbers: "By the numbers", builds: "What we build", agents: "Skills install into", talk: "Let's talk about", connect: "Connect", team: "Team",
+      kEmail: "Email", kWechat: "WeChat", kPhone: "Phone", kWeb: "Website",
+      aMail: "MAIL", aCopy: "COPY", aCall: "CALL", aOpen: "OPEN", aView: "VIEW",
+      wechatCopied: "WeChat ID copied — paste it in WeChat › Add Contacts",
+      linkCopied: "Link copied", copyFail: "Couldn't copy — please copy it manually",
+      saved: "Contact downloaded — open the file to add it to your phone",
+      inWechat: "WeChat blocks downloads here. Tap ··· (top right) › Open in Browser.",
+      qrTitle: "Scan to connect", qrTabCard: "My card", qrTabSite: "Huohua Hub",
+      qrCardCap: "Scan to open my card & save my contact", qrSiteCap: "Scan to explore Huohua Hub",
+      qrNeedsDeploy: "Publish this page online and its QR code appears here. (Or set cardUrl in the config.)",
+      qrMissing: "QR component failed to load (assets/qrcode.min.js).",
+      footLeft: "火花工坊 · huohuahub.com"
+    },
+    zh: {
+      status: "欢迎交流", save: "保存联系人", qr: "显示二维码", share: "分享", close: "关闭", lang: "语言",
+      numbers: "关键数据", builds: "我们在做", agents: "Skill 一键装进", talk: "合作方向", connect: "联系我", team: "团队",
+      kEmail: "邮箱", kWechat: "微信", kPhone: "电话", kWeb: "官网",
+      aMail: "发邮件", aCopy: "复制", aCall: "拨打", aOpen: "打开", aView: "查看",
+      wechatCopied: "微信号已复制，去微信添加好友吧",
+      linkCopied: "链接已复制", copyFail: "复制失败，请手动复制",
+      saved: "名片已下载，打开文件即可存入通讯录",
+      inWechat: "微信内无法直接保存，请点右上角「···」→ 在浏览器打开",
+      qrTitle: "扫码加我", qrTabCard: "我的名片", qrTabSite: "火花工坊",
+      qrCardCap: "扫码打开我的名片，一键存入通讯录", qrSiteCap: "扫码访问火花工坊",
+      qrNeedsDeploy: "部署上线后，这里会显示名片二维码（或在配置里填写 cardUrl）",
+      qrMissing: "二维码组件加载失败（assets/qrcode.min.js）",
+      footLeft: "火花工坊 · huohuahub.com"
+    }
+  };
+
+  const ICONS = {
+    mail: '<rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/>',
+    wechat: '<path d="M9.6 4.5c-4 0-7.1 2.6-7.1 5.9 0 1.8 1 3.4 2.6 4.5l-.6 2.1 2.5-1.3c.8.2 1.7.4 2.6.4"/><path d="M15.6 9.3c-3.4 0-6.1 2.2-6.1 5s2.7 5 6.1 5c.7 0 1.4-.1 2-.3l2.2 1.1-.5-1.9c1.4-.9 2.3-2.3 2.3-3.9 0-2.8-2.7-5-6-5z"/><path d="M7 8.6h.01M11.6 8.6h.01M13.6 13.3h.01M17.6 13.3h.01"/>',
+    phone: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>',
+    whatsapp: '<path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/>',
+    linkedin: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+    x: '<path d="M4 4l11.7 16H20L8.3 4z"/><path d="M4 20l6.8-6.8m2.4-2.4L20 4"/>',
+    globe: '<circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+    users: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>',
+    terminal: '<rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m7 10 3 2-3 2M13 15h4"/>',
+    layers: '<path d="m12 2 10 5-10 5L2 7z"/><path d="m2 17 10 5 10-5M2 12l10 5 10-5"/>',
+    copy: '<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
+    arrow: '<path d="M7 17 17 7M8 7h9v9"/>'
+  };
+
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => document.querySelectorAll(sel);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (ch) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[ch]);
+  const pick = (v, lang) => (v && typeof v === "object" && !Array.isArray(v)) ? (v[lang] ?? v.en ?? "") : (v ?? "");
+  const highlight = (s) => esc(s).replace(/\[\[(.+?)\]\]/g, "<em>$1</em>").replace(/\n/g, "<br>");
+  const plain = (s) => String(s ?? "").replace(/\[\[|\]\]/g, "").replace(/\s*\n\s*/g, " ");
+  const icon = (name) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[name] || ""}</svg>`;
+  const prettyUrl = (u) => String(u).replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");
+  const handleOf = (u) => "@" + prettyUrl(u).split("/").filter(Boolean).pop();
+  const flameSvg = (id) => `<svg class="flame" viewBox="5 3 14 19" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff2442"/><stop offset=".6" stop-color="#ff6a3d"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs><path fill="url(#${id})" d="${FLAME}"/></svg>`;
+
+  /* ---------- 语言 ---------- */
+  function initialLang() {
+    const q = new URLSearchParams(location.search).get("lang");
+    if (q === "en" || q === "zh") return q;
+    try {
+      const saved = localStorage.getItem("card.lang");
+      if (saved === "en" || saved === "zh") return saved;
+    } catch (e) { /* 隐私模式等情况下读不到，忽略 */ }
+    return (navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+  }
+  let lang = initialLang();
+
+  /* ---------- 渲染 ---------- */
+  function contactRows(t) {
+    const c = ME, rows = [];
+    if (c.email) rows.push({ icon: "mail", k: t.kEmail, v: c.email, href: `mailto:${c.email}`, act: t.aMail });
+    if (c.wechat) rows.push({ icon: "wechat", k: t.kWechat, v: c.wechat, copy: c.wechat, act: t.aCopy });
+    if (c.phone) rows.push({ icon: "phone", k: t.kPhone, v: c.phone, href: `tel:${c.phone.replace(/[^\d+]/g, "")}`, act: t.aCall });
+    if (c.whatsapp) rows.push({ icon: "whatsapp", k: "WhatsApp", v: c.whatsapp, href: `https://wa.me/${c.whatsapp.replace(/\D/g, "")}`, act: t.aOpen, ext: true });
+    if (c.linkedin) rows.push({ icon: "linkedin", k: "LinkedIn", v: prettyUrl(c.linkedin).replace(/^linkedin\.com\//, ""), href: c.linkedin, act: t.aOpen, ext: true });
+    if (c.x) rows.push({ icon: "x", k: "X", v: handleOf(c.x), href: c.x, act: t.aOpen, ext: true });
+    if (CARD.website) rows.push({ icon: "globe", k: t.kWeb, v: prettyUrl(CARD.website), href: CARD.website, act: t.aOpen, ext: true });
+    return rows;
+  }
+
+  function teamRows(t) {
+    return PEOPLE.filter((p) => p !== ME).map((p) => {
+      const params = new URLSearchParams(location.search);
+      params.set("p", p.id);
+      const face = p.avatar
+        ? `<img src="${esc(p.avatar)}" alt="" decoding="async">`
+        : esc(Array.from(p.name.zh || p.name.en)[0] || "");
+      return `<li><a class="row" href="?${esc(params.toString())}"><span class="mate">${face}</span>` +
+        `<span class="meta"><span class="k">${esc(pick(p.title, lang))}</span><span class="v">${esc(pick(p.name, lang))} · ${esc(lang === "zh" ? p.name.en : p.name.zh)}</span></span>` +
+        `<span class="act">${esc(t.aView)}${icon("arrow")}</span></a></li>`;
+    }).join("");
+  }
+
+  function render() {
+    const c = CARD, t = UI[lang];
+    document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+    document.title = `${pick(ME.name, lang)} · ${pick(ME.title, lang)}, ${pick(c.company, lang)}`;
+
+    $$("[data-i18n]").forEach((el) => { el.textContent = t[el.dataset.i18n]; });
+    $$("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+    $("#langGroup").setAttribute("aria-label", t.lang);
+    $("#qrBtn").setAttribute("aria-label", t.qr); $("#qrBtn").title = t.qr;
+    $("#shareBtn").setAttribute("aria-label", t.share); $("#shareBtn").title = t.share;
+    $("#qrClose").setAttribute("aria-label", t.close);
+
+    $("#brandName").textContent = pick(c.company, lang);
+    $("#brandSub").textContent = lang === "zh" ? prettyUrl(c.website) : `${c.company.zh} · ${prettyUrl(c.website)}`;
+    $("#brandLink").href = c.website;
+
+    $("#name").textContent = pick(ME.name, lang);
+    const alt = $("#altName");
+    alt.textContent = lang === "zh" ? ME.name.en : ME.name.zh;
+    alt.className = "alt-name " + (lang === "zh" ? "is-latin" : "is-cjk");
+
+    const firstRole = lang === "zh"
+      ? `${pick(c.company, lang)} ${pick(ME.title, lang)}`
+      : `${pick(ME.title, lang)} @ ${pick(c.company, lang)}`;
+    const roles = [firstRole, ...pick(ME.taglines || c.taglines, lang)];
+    $("#roleSr").textContent = roles.join(" · ");
+    startTyping(roles);
+
+    $("#pitch").innerHTML = highlight(pick(c.pitch, lang));
+    $("#mission").textContent = pick(c.mission, lang);
+
+    $("#stats").innerHTML = c.stats.map((s) =>
+      `<div class="stat"><b data-value="${esc(s.value)}">${esc(s.value)}</b><span>${esc(pick(s.label, lang))}</span></div>`).join("");
+
+    $("#builds").innerHTML = c.builds.map((b) =>
+      `<li class="build"><span class="ico">${icon(b.icon)}</span><div><h3>${esc(pick(b.title, lang))}</h3><p>${esc(pick(b.desc, lang))}</p></div></li>`).join("");
+
+    $("#talk").innerHTML = pick(c.talk, lang).map((x) => `<li class="chip">${esc(x)}</li>`).join("");
+
+    $("#contacts").innerHTML = contactRows(t).map((r) => {
+      const inner = `<span class="ico">${icon(r.icon)}</span><span class="meta"><span class="k">${esc(r.k)}</span><span class="v">${esc(r.v)}</span></span><span class="act">${esc(r.act)}${icon(r.copy ? "copy" : "arrow")}</span>`;
+      return `<li>${r.copy
+        ? `<button type="button" class="row" data-copy="${esc(r.copy)}">${inner}</button>`
+        : `<a class="row" href="${esc(r.href)}"${r.ext ? ' target="_blank" rel="noopener"' : ""}>${inner}</a>`}</li>`;
+    }).join("");
+
+    const team = teamRows(t);
+    $("#teamSection").hidden = !team;
+    $("#team").innerHTML = team;
+
+    $("#footLeft").textContent = t.footLeft;
+    $("#footRight").textContent = pick(c.location, lang);
+
+    if ($("#qrModal").classList.contains("open")) renderQR();
+  }
+
+  function renderOnce() {
+    const wrap = $("#avatarWrap"), face = $("#avatar");
+    if (ME.avatar) {
+      const img = new Image();
+      img.alt = ME.name.en;
+      img.decoding = "async";
+      img.onload = () => wrap.classList.add("has-photo");
+      img.onerror = () => { face.innerHTML = flameSvg("flameGrad"); wrap.classList.remove("has-photo"); };
+      img.src = ME.avatar;
+      face.replaceChildren(img);
+    } else {
+      face.innerHTML = flameSvg("flameGrad");
+    }
+    const items = CARD.agents.map((a) => `<li>${esc(a)}</li>`).join("");
+    $("#agents").innerHTML = `<div class="marquee-track"><ul>${items}</ul><ul aria-hidden="true">${items}</ul></div>`;
+  }
+
+  /* ---------- 打字机 ---------- */
+  let typeTimer = 0;
+  function startTyping(roles) {
+    clearTimeout(typeTimer);
+    const el = $("#typed");
+    if (reduceMotion || roles.length < 2) { el.textContent = roles[0] || ""; return; }
+    let r = 0, i = 0, deleting = false;
+    const tick = () => {
+      const chars = Array.from(roles[r]);
+      i += deleting ? -1 : 1;
+      el.textContent = chars.slice(0, i).join("");
+      let wait = deleting ? 28 : 55 + Math.random() * 45;
+      if (!deleting && i >= chars.length) { deleting = true; wait = 2200; }
+      else if (deleting && i <= 0) { deleting = false; r = (r + 1) % roles.length; wait = 350; }
+      typeTimer = setTimeout(tick, wait);
+    };
+    tick();
+  }
+
+  /* ---------- 数字滚动 ---------- */
+  function countUp() {
+    if (reduceMotion) return;
+    $$(".stat b").forEach((b) => {
+      const m = /^(\d+(?:\.\d+)?)(.*)$/.exec(b.dataset.value || "");
+      if (!m) return;
+      const end = parseFloat(m[1]), suffix = m[2], decimals = (m[1].split(".")[1] || "").length;
+      const t0 = performance.now(), dur = 1200;
+      const step = (now) => {
+        const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
+        b.textContent = (end * eased).toFixed(decimals) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
+  }
+
+  /* ---------- 提示 / 复制 ---------- */
+  let toastTimer = 0;
+  function toast(msg) {
+    const el = $("#toast");
+    el.textContent = msg;
+    el.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove("show"), 2800);
+  }
+
+  async function copyText(text) {
+    try { await navigator.clipboard.writeText(text); return true; } catch (e) { /* 走下面的兜底 */ }
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, text.length);
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+
+  /* ---------- 存入通讯录（vCard） ---------- */
+  let photo = null;
+  async function preloadPhoto() {
+    const src = ME.avatar;
+    if (!src || location.protocol === "file:") return;
+    try {
+      const res = await fetch(src);
+      if (!res.ok) return;
+      const blob = await res.blob();
+      if (blob.size > 400000) return; // 头像太大就不塞进 vcf，保持文件轻量
+      const data = await new Promise((resolve, reject) => {
+        const fr = new FileReader();
+        fr.onload = () => resolve(String(fr.result).split(",")[1]);
+        fr.onerror = reject;
+        fr.readAsDataURL(blob);
+      });
+      photo = { type: /png/i.test(blob.type) ? "PNG" : "JPEG", data };
+    } catch (e) { photo = null; }
+  }
+
+  const vEsc = (s) => String(s).replace(/\\/g, "\\\\").replace(/\r?\n/g, "\\n").replace(/([,;])/g, "\\$1");
+  const fold = (line) => {
+    if (line.length <= 75) return line;
+    const out = [line.slice(0, 75)];
+    for (let i = 75; i < line.length; i += 74) out.push(" " + line.slice(i, i + 74));
+    return out.join("\r\n");
+  };
+
+  function buildVCard() {
+    const c = CARD, p = ME;
+    const L = [
+      "BEGIN:VCARD", "VERSION:3.0",
+      `N:${vEsc(p.familyName || "")};${vEsc(p.givenName || p.name.en)};;;`,
+      `FN:${vEsc(p.name.en)}`
+    ];
+    if (p.name.zh) L.push(`NICKNAME:${vEsc(p.name.zh)}`);
+    L.push(`ORG:${vEsc(`${c.company.en} (${c.company.zh})`)}`);
+    L.push(`TITLE:${vEsc(pick(p.title, lang))}`);
+    if (p.email) L.push(`EMAIL;TYPE=INTERNET,WORK:${p.email}`);
+    if (p.phone) L.push(`TEL;TYPE=CELL:${p.phone.replace(/[^\d+]/g, "")}`);
+    if (c.website) L.push(`URL:${c.website}`);
+    if (p.linkedin) L.push(`X-SOCIALPROFILE;TYPE=linkedin:${p.linkedin}`);
+    if (p.x) L.push(`X-SOCIALPROFILE;TYPE=twitter:${p.x}`);
+    const notes = [
+      p.wechat && `WeChat: ${p.wechat}`,
+      p.whatsapp && `WhatsApp: ${p.whatsapp}`,
+      plain(pick(c.pitch, lang))
+    ].filter(Boolean);
+    L.push(`NOTE:${vEsc(notes.join("\n"))}`);
+    L.push(`ADR;TYPE=WORK:;;;${vEsc(c.city || "")};;;${vEsc(c.country || "")}`);
+    if (photo) L.push(fold(`PHOTO;ENCODING=b;TYPE=${photo.type}:${photo.data}`));
+    L.push("END:VCARD");
+    return L.join("\r\n") + "\r\n";
+  }
+
+  function saveContact() {
+    const t = UI[lang];
+    if (/MicroMessenger/i.test(navigator.userAgent)) { toast(t.inWechat); return; }
+    const blob = new Blob([buildVCard()], { type: "text/vcard;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${(ME.name.en || "contact").replace(/[^\w\- ]+/g, "").trim() || "contact"}.vcf`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    toast(t.saved);
+  }
+
+  /* ---------- 二维码 ---------- */
+  // 当前这个人的名片网址：<cardUrl 或当前页面>?p=<id>
+  function cardUrl() {
+    const base = (CARD.cardUrl || "").trim() ||
+      (/^https?:$/.test(location.protocol) ? location.origin + location.pathname : "");
+    if (!base) return "";
+    try {
+      const u = new URL(base);
+      if (PEOPLE.length > 1) u.searchParams.set("p", ME.id);
+      return u.toString();
+    } catch (e) { return base; }
+  }
+
+  function qrSvg(text) {
+    // H 级纠错（可容 30% 损坏），中间挖空放火花 Logo；v7 起中心有校正图形，就不放 Logo
+    const qr = window.QRLite.create(text, { errorCorrectionLevel: "H" });
+    const n = qr.modules.size, d = qr.modules.data;
+    const useLogo = qr.version < 7;
+    let L = Math.round(n * 0.22);
+    if (L % 2 === 0) L += 1;
+    const lo = (n - L) / 2, hi = lo + L;
+    const isFinder = (r, c) => (r < 7 && c < 7) || (r < 7 && c >= n - 7) || (r >= n - 7 && c < 7);
+    let path = "";
+    for (let r = 0; r < n; r++) {
+      for (let c = 0; c < n; c++) {
+        if (!d[r * n + c] || isFinder(r, c)) continue;
+        if (useLogo && r >= lo && r < hi && c >= lo && c < hi) continue;
+        path += `M${c} ${r}h1v1h-1z`;
+      }
+    }
+    const eye = (x, y) =>
+      `<rect x="${x + 0.5}" y="${y + 0.5}" width="6" height="6" rx="1.5" fill="none" stroke="#0b0d14" stroke-width="1"/>` +
+      `<rect x="${x + 2}" y="${y + 2}" width="3" height="3" rx="0.8" fill="#e60033"/>`;
+    const s = L - 0.7;
+    const logo = useLogo
+      ? `<rect x="${lo + 0.35}" y="${lo + 0.35}" width="${s}" height="${s}" rx="${(s * 0.24).toFixed(2)}" fill="#ff2442"/>` +
+        `<path fill="#fff" transform="translate(${n / 2} ${n / 2 + 0.1}) scale(${(s / 24 * 0.78).toFixed(4)}) translate(-12 -12.5)" d="${FLAME}"/>`
+      : "";
+    return `<svg viewBox="0 0 ${n} ${n}" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR code">` +
+      `<path d="${path}" fill="#0b0d14" shape-rendering="crispEdges"/>${eye(0, 0)}${eye(n - 7, 0)}${eye(0, n - 7)}${logo}</svg>`;
+  }
+
+  let qrTab = "card", lastFocus = null;
+  function renderQR() {
+    const t = UI[lang];
+    const url = qrTab === "card" ? cardUrl() : CARD.website;
+    $$("[data-tab]").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === qrTab)));
+    $("#qrCap").textContent = qrTab === "card" ? t.qrCardCap : t.qrSiteCap;
+    $("#qrUrl").textContent = url ? prettyUrl(url) : "";
+    const box = $("#qrBox");
+    if (!url) { box.innerHTML = `<p class="qr-msg">${esc(t.qrNeedsDeploy)}</p>`; return; }
+    if (!window.QRLite) { box.innerHTML = `<p class="qr-msg">${esc(t.qrMissing)}</p>`; return; }
+    box.innerHTML = qrSvg(url);
+  }
+  function openQR() {
+    lastFocus = document.activeElement;
+    qrTab = cardUrl() ? "card" : "site";
+    renderQR();
+    const m = $("#qrModal");
+    m.classList.add("open");
+    m.setAttribute("aria-hidden", "false");
+    $("#qrClose").focus();
+  }
+  function closeQR() {
+    const m = $("#qrModal");
+    m.classList.remove("open");
+    m.setAttribute("aria-hidden", "true");
+    if (lastFocus) lastFocus.focus();
+  }
+
+  /* ---------- 分享 ---------- */
+  async function share() {
+    const t = UI[lang], url = cardUrl() || CARD.website;
+    if (navigator.share) {
+      try { await navigator.share({ title: document.title, text: plain(pick(CARD.pitch, lang)), url }); } catch (e) { /* 用户取消 */ }
+      return;
+    }
+    toast((await copyText(url)) ? t.linkCopied : t.copyFail);
+  }
+
+  /* ---------- 卡片 3D 倾斜（仅桌面） ---------- */
+  function tilt() {
+    if (reduceMotion || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    const card = $("#card");
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      card.style.setProperty("--ry", `${((x - 0.5) * 5).toFixed(2)}deg`);
+      card.style.setProperty("--rx", `${((0.5 - y) * 2.5).toFixed(2)}deg`);
+    });
+    card.addEventListener("pointerleave", () => {
+      card.style.setProperty("--rx", "0deg");
+      card.style.setProperty("--ry", "0deg");
+    });
+  }
+
+  /* ---------- 封面里的火花粒子（白色 + 金色，从下往上飘） ---------- */
+  function sparks() {
+    if (reduceMotion) return;
+    const cv = $("#sparks"), ctx = cv.getContext("2d"), host = cv.parentElement;
+    if (!ctx) return;
+    let W = 0, H = 0, raf = 0;
+    const parts = [];
+    const spawn = (p, anywhere) => {
+      p.x = Math.random() * W;
+      p.y = anywhere ? Math.random() * H : H + 4;
+      p.r = Math.random() * 1.3 + 0.6;
+      p.vx = (Math.random() - 0.5) * 0.25;
+      p.vy = -(Math.random() * 0.6 + 0.3);
+      p.phase = Math.random() * 6.28;
+      p.life = 0;
+      p.ttl = 140 + Math.random() * 220;
+      p.gold = Math.random() < 0.35;
+      return p;
+    };
+    const resize = () => {
+      const r = host.getBoundingClientRect(), dpr = Math.min(window.devicePixelRatio || 1, 2);
+      W = r.width; H = r.height;
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      const want = Math.round(Math.min(34, Math.max(14, (W * H) / 1700)));
+      while (parts.length < want) parts.push(spawn({}, true));
+      parts.length = want;
+    };
+    const frame = () => {
+      ctx.clearRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "lighter";
+      for (const p of parts) {
+        p.life++;
+        p.phase += 0.05;
+        p.x += p.vx + Math.sin(p.phase) * 0.25;
+        p.y += p.vy;
+        if (p.y < -6 || p.life > p.ttl) spawn(p, false);
+        const a = Math.min(1, p.life / 25) * (1 - p.life / p.ttl) * (0.6 + 0.4 * Math.sin(p.phase * 2) ** 2);
+        const rgb = p.gold ? "255,220,150" : "255,255,255";
+        ctx.fillStyle = `rgba(${rgb},${(a * 0.25).toFixed(3)})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r * 3.2, 0, 6.283); ctx.fill();
+        ctx.fillStyle = `rgba(${rgb},${(a * 0.95).toFixed(3)})`;
+        ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 6.283); ctx.fill();
+      }
+      raf = requestAnimationFrame(frame);
+    };
+    resize();
+    if ("ResizeObserver" in window) new ResizeObserver(resize).observe(host);
+    else addEventListener("resize", resize);
+    document.addEventListener("visibilitychange", () => {
+      cancelAnimationFrame(raf);
+      if (!document.hidden) raf = requestAnimationFrame(frame);
+    });
+    raf = requestAnimationFrame(frame);
+  }
+
+  /* ---------- 事件 ---------- */
+  $("#langGroup").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-lang]");
+    if (!b || b.dataset.lang === lang) return;
+    lang = b.dataset.lang;
+    try { localStorage.setItem("card.lang", lang); } catch (err) { /* 存不了就算了 */ }
+    render();
+  });
+  $("#contacts").addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-copy]");
+    if (!b) return;
+    const t = UI[lang];
+    toast((await copyText(b.dataset.copy)) ? t.wechatCopied : t.copyFail);
+  });
+  $("#saveBtn").addEventListener("click", saveContact);
+  $("#qrBtn").addEventListener("click", openQR);
+  $("#shareBtn").addEventListener("click", share);
+  $("#qrClose").addEventListener("click", closeQR);
+  $("#qrModal").addEventListener("click", (e) => {
+    if (e.target === e.currentTarget) { closeQR(); return; }
+    const tab = e.target.closest("[data-tab]");
+    if (tab) { qrTab = tab.dataset.tab; renderQR(); }
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && $("#qrModal").classList.contains("open")) closeQR();
+  });
+
+  renderOnce();
+  render();
+  countUp();
+  tilt();
+  sparks();
+  preloadPhoto();
+})();
+</script>
+</body>
+</html>
