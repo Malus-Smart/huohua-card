@@ -86,13 +86,6 @@ window.CARD = {
     zh: "我们在打造中国 AI 创作者的大本营：分享作品、提示词与 Agent Skill。"
   },
 
-  // 关键数据：有真实用户数 / 内容数时，可以把下面任意一项换成那个数字（如 "12K"）
-  stats: [
-    { value: "8",  label: { en: "AI agents supported",     zh: "支持 Agent" } },
-    { value: "4",  label: { en: "Platforms shipped",       zh: "已上线终端" } },
-    { value: "CN", label: { en: "Live & fully compliant",  zh: "境内合规运营" } }
-  ],
-
   builds: [
     { icon: "users",
       title: { en: "Creator Community", zh: "创作者社区" },
@@ -135,7 +128,6 @@ window.CARD = {
   --badge:#d4002e;
   /* 和火花工坊官网首页横幅同一套渐变 */
   --cover:radial-gradient(120% 180% at 100% 0%,rgba(255,255,255,.16) 0%,rgba(0,0,0,0) 45%),linear-gradient(96deg,#c00e33 0%,#ff2442 55%,#ff415f 100%);
-  --num:linear-gradient(100deg,#c00e33 0%,#ff2442 60%,#ff5a3c 100%);
   --font-display:"Space Grotesk","Avenir Next",Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
   --font-body:"Avenir Next",Avenir,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
   --font-mono:"JetBrains Mono",ui-monospace,"SF Mono","Cascadia Code",Consolas,"PingFang SC","Microsoft YaHei",monospace;
@@ -242,12 +234,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
 .label b{color:var(--accent-strong);font-weight:700}
 .label::after{content:"";flex:1;height:1px;margin-left:4px;background:linear-gradient(90deg,var(--line-2),transparent)}
 
-.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-2);border-radius:18px;background:linear-gradient(180deg,#fff,var(--tint-soft))}
-.stat{padding:15px 8px 13px;text-align:center}
-.stat+.stat{border-left:1px solid var(--line-2)}
-.stat b{display:block;font-family:var(--font-display);font-size:31px;line-height:1;font-weight:700;background:var(--num);-webkit-background-clip:text;background-clip:text;color:transparent}
-.stat span{display:block;margin-top:9px;font-family:var(--font-mono);font-size:10px;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--dim)}
-
 .builds{display:grid;gap:8px}
 .build{display:flex;gap:12px;padding:12px;border-radius:16px;border:1px solid var(--line-2);background:#fff;transition:border-color .25s,background .25s}
 .build:hover{border-color:var(--outline);background:var(--tint-soft)}
@@ -325,7 +311,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
 
 @media (max-width:360px){
   .body{padding-left:16px;padding-right:16px}
-  .stat span{font-size:9px}
   .brand-sub{display:none}
   .actions{gap:8px}
   .btn{font-size:15px}
@@ -380,9 +365,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
       <button class="btn btn-ghost" id="qrBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3M21 14v.01M14 21h3M21 17v4h-1"/></svg></button>
       <button class="btn btn-ghost" id="shareBtn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg></button>
     </div>
-
-    <h2 class="label"><b>//</b><span data-i18n="numbers"></span></h2>
-    <div class="stats" id="stats"></div>
 
     <h2 class="label"><b>//</b><span data-i18n="builds"></span></h2>
     <ul class="builds" id="builds"></ul>
@@ -442,7 +424,7 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
   const UI = {
     en: {
       status: "Open to connect", save: "Save Contact", qr: "Show QR code", share: "Share", close: "Close", lang: "Language",
-      numbers: "By the numbers", builds: "What we build", agents: "Skills install into", talk: "Let's talk about", connect: "Connect", team: "Team",
+      builds: "What we build", agents: "Skills install into", talk: "Let's talk about", connect: "Connect", team: "Team",
       kEmail: "Email", kWechat: "WeChat", kPhone: "Phone", kWeb: "Website",
       aMail: "MAIL", aCopy: "COPY", aCall: "CALL", aOpen: "OPEN", aView: "VIEW",
       wechatCopied: "WeChat ID copied — paste it in WeChat › Add Contacts",
@@ -457,7 +439,7 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
     },
     zh: {
       status: "欢迎交流", save: "保存联系人", qr: "显示二维码", share: "分享", close: "关闭", lang: "语言",
-      numbers: "关键数据", builds: "我们在做", agents: "Skill 一键装进", talk: "合作方向", connect: "联系我", team: "团队",
+      builds: "我们在做", agents: "Skill 一键装进", talk: "合作方向", connect: "联系我", team: "团队",
       kEmail: "邮箱", kWechat: "微信", kPhone: "电话", kWeb: "官网",
       aMail: "发邮件", aCopy: "复制", aCall: "拨打", aOpen: "打开", aView: "查看",
       wechatCopied: "微信号已复制，去微信添加好友吧",
@@ -567,9 +549,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
     $("#pitch").innerHTML = highlight(pick(c.pitch, lang));
     $("#mission").textContent = pick(c.mission, lang);
 
-    $("#stats").innerHTML = c.stats.map((s) =>
-      `<div class="stat"><b data-value="${esc(s.value)}">${esc(s.value)}</b><span>${esc(pick(s.label, lang))}</span></div>`).join("");
-
     $("#builds").innerHTML = c.builds.map((b) =>
       `<li class="build"><span class="ico">${icon(b.icon)}</span><div><h3>${esc(pick(b.title, lang))}</h3><p>${esc(pick(b.desc, lang))}</p></div></li>`).join("");
 
@@ -626,23 +605,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
       typeTimer = setTimeout(tick, wait);
     };
     tick();
-  }
-
-  /* ---------- 数字滚动 ---------- */
-  function countUp() {
-    if (reduceMotion) return;
-    $$(".stat b").forEach((b) => {
-      const m = /^(\d+(?:\.\d+)?)(.*)$/.exec(b.dataset.value || "");
-      if (!m) return;
-      const end = parseFloat(m[1]), suffix = m[2], decimals = (m[1].split(".")[1] || "").length;
-      const t0 = performance.now(), dur = 1200;
-      const step = (now) => {
-        const p = Math.min(1, (now - t0) / dur), eased = 1 - Math.pow(1 - p, 3);
-        b.textContent = (end * eased).toFixed(decimals) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      };
-      requestAnimationFrame(step);
-    });
   }
 
   /* ---------- 提示 / 复制 ---------- */
@@ -921,7 +883,6 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
 
   renderOnce();
   render();
-  countUp();
   tilt();
   sparks();
   preloadPhoto();
