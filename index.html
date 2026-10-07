@@ -82,8 +82,8 @@ window.CARD = {
   },
   // 英文副标题顺带解释双关：外国人不知道「火花」= spark
   mission: {
-    en: "Huohua (火花) means “spark” — we're building China's home for AI creators.",
-    zh: "我们在打造中国 AI 创作者的大本营：分享作品、提示词与 Agent Skill。"
+    en: "Huohua (火花) means “spark.”\nIt's where creators share AI projects, prompts and agent skills.",
+    zh: "一个 AI 创作者社区，\n分享作品、提示词和 Agent Skill。"
   },
 
   builds: [
@@ -97,8 +97,8 @@ window.CARD = {
                zh: "一条命令，把审核过的 Skill 装进 Claude Code、Codex、Cursor 等 8 款 Agent。" } },
     { icon: "layers",
       title: { en: "Web · iOS · Android · CLI", zh: "Web · iOS · Android · CLI" },
-      desc:  { en: "ICP-filed and fully compliant — live across mainland China.",
-               zh: "已完成 ICP 与 App 备案，在中国大陆全平台合规上线。" } }
+      desc:  { en: "ICP-filed and live in mainland China.",
+               zh: "已完成 ICP 与 App 备案，在国内正式上线。" } }
   ],
 
   agents: ["Claude Code", "Codex", "Cursor", "Gemini CLI", "Qwen Code", "OpenCode", "TRAE", "Windsurf"],
@@ -547,7 +547,7 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
     startTyping(roles);
 
     $("#pitch").innerHTML = highlight(pick(c.pitch, lang));
-    $("#mission").textContent = pick(c.mission, lang);
+    $("#mission").innerHTML = highlight(pick(c.mission, lang));
 
     $("#builds").innerHTML = c.builds.map((b) =>
       `<li class="build"><span class="ico">${icon(b.icon)}</span><div><h3>${esc(pick(b.title, lang))}</h3><p>${esc(pick(b.desc, lang))}</p></div></li>`).join("");
