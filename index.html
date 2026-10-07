@@ -480,7 +480,7 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
   const handleOf = (u) => "@" + prettyUrl(u).split("/").filter(Boolean).pop();
   const flameSvg = (id) => `<svg class="flame" viewBox="5 3 14 19" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff2442"/><stop offset=".6" stop-color="#ff6a3d"/><stop offset="1" stop-color="#ffb547"/></linearGradient></defs><path fill="url(#${id})" d="${FLAME}"/></svg>`;
 
-  /* ---------- 语言 ---------- */
+  /* ---------- 语言：默认英文；网址 ?lang= 或这台手机上手动切换过的选择优先 ---------- */
   function initialLang() {
     const q = new URLSearchParams(location.search).get("lang");
     if (q === "en" || q === "zh") return q;
@@ -488,7 +488,7 @@ h1{margin-top:10px;font-family:var(--font-display);font-weight:700;font-size:cla
       const saved = localStorage.getItem("card.lang");
       if (saved === "en" || saved === "zh") return saved;
     } catch (e) { /* 隐私模式等情况下读不到，忽略 */ }
-    return (navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+    return "en";
   }
   let lang = initialLang();
 
